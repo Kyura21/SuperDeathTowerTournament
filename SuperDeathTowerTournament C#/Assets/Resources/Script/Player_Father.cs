@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player_Father : MonoBehaviour {
 
 	//player handling
+	public float gravity = 20;
 	public float speed = 8;
 	public float accelleration = 12;
 
@@ -25,7 +26,8 @@ public class Player_Father : MonoBehaviour {
 		TargetSpeed = Input.GetAxisRaw ("Horizontal") * speed;
 		CurrentSpeed = IncrementTowards (CurrentSpeed, TargetSpeed, accelleration);
 
-		amountToMove = new Vector2 (CurrentSpeed, 0);
+		amountToMove.x = CurrentSpeed;
+		amountToMove.y -= gravity * Time.deltaTime;
 		playerPhysics.Move (amountToMove * Time.deltaTime);
 	}
 
