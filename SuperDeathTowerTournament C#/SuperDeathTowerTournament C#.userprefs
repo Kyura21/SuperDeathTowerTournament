@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Script\Player_Father.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Script\PlayerPhysics.cs">
     <Files>
-      <File FileName="Assets\Resources\Script\Player_Father.cs" Line="28" Column="3" />
-      <File FileName="Assets\Resources\Script\PlayerPhysics.cs" Line="48" Column="27" />
+      <File FileName="Assets\Resources\Script\Player_Father.cs" Line="31" Column="4" />
+      <File FileName="Assets\Resources\Script\PlayerPhysics.cs" Line="51" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

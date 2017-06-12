@@ -1,5 +1,6 @@
-C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\Temp\bin\Debug\Assembly-CSharp.dll
-C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
+C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
 C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\Temp\bin\Debug\nunit.framework.dll
 C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\Temp\bin\Debug\UnityEditor.dll
 C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\Temp\bin\Debug\UnityEngine.Analytics.dll
@@ -26,7 +27,5 @@ C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\Temp\bin\Debug\nuni
 C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\Temp\bin\Debug\UnityEngine.Analytics.xml
 C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\Temp\bin\Debug\UnityEngine.HoloLens.xml
 C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\Temp\bin\Debug\UnityEngine.VR.xml
-C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
-C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\obj\Debug\Assembly-CSharp.dll
-C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\obj\Debug\Assembly-CSharp.pdb
-C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\utente\Desktop\SDTT C#\SuperDeathTowerTournament C#\obj\Debug\Assembly-CSharp-firstpass.pdb

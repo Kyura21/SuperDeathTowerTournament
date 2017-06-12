@@ -9,6 +9,7 @@ public class Player_Father : MonoBehaviour {
 	public float gravity = 20;
 	public float speed = 8;
 	public float accelleration = 12;
+	public float JumpHeight = 12;
 
 	private float CurrentSpeed;
 	private float TargetSpeed;
@@ -25,6 +26,14 @@ public class Player_Father : MonoBehaviour {
 	void Update () {
 		TargetSpeed = Input.GetAxisRaw ("Horizontal") * speed;
 		CurrentSpeed = IncrementTowards (CurrentSpeed, TargetSpeed, accelleration);
+
+		if (playerPhysics.grounded) {
+			amountToMove.y = 0;
+			//Jump
+			if (Input.GetButtonDown ("Jump")) {
+				amountToMove.y = JumpHeight;
+			}
+		}
 
 		amountToMove.x = CurrentSpeed;
 		amountToMove.y -= gravity * Time.deltaTime;
