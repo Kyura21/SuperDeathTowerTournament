@@ -24,6 +24,13 @@ public class Player_Father : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (playerPhysics.MovementStopped) {
+			TargetSpeed = 0;
+			CurrentSpeed = 0;
+		}
+
+		//input
 		TargetSpeed = Input.GetAxisRaw ("Horizontal") * speed;
 		CurrentSpeed = IncrementTowards (CurrentSpeed, TargetSpeed, accelleration);
 
