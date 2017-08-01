@@ -12,12 +12,18 @@ public class PlayerPhysics : MonoBehaviour {
 	private Vector3 s;
 	private Vector3 c;
 
+	public bool Playercol;
+	public GameObject Enemy;
+
+
+
 	private float skin = .005f;
 	[HideInInspector]
 	public bool grounded;
 	[HideInInspector]
 	public bool MovementStopped;
 	Ray ray;
+	Ray Raggio;
 	RaycastHit Hit;
 
 
@@ -25,6 +31,7 @@ public class PlayerPhysics : MonoBehaviour {
 		collider = GetComponent<BoxCollider> ();
 		s = collider.size;
 		c = collider.center;
+		Playercol = false;
 
 	}
 
@@ -38,7 +45,7 @@ public class PlayerPhysics : MonoBehaviour {
 		grounded = false;
 		for (int i = 0; i < 3; i++) {
 			float dir = Mathf.Sign (deltaY);
-			float x = (p.x + c.x - s.x / 2) + s.x / 2 * i; //left centre anda then rightmost point of collider;
+			float x = (p.x + c.x - s.x / 2) + s.x / 2 * i; //left centre and then rightmost point of collider;
 			float y = p.y + c.y + s.y / 2 * dir; //bottom of collider;
 
 			ray = new Ray (new Vector2 (x, y), new Vector2 (0, dir));
@@ -46,7 +53,6 @@ public class PlayerPhysics : MonoBehaviour {
 			if (Physics.Raycast (ray, out Hit, Mathf.Abs (deltaY) + skin, collisionMask)) {
 				// Get distance between player and ground
 				float dst = Vector3.Distance (ray.origin, Hit.point);
-
 				//stop player's downwards movement after coming within skin width of a collider
 
 				if (dst > skin) {
@@ -54,8 +60,34 @@ public class PlayerPhysics : MonoBehaviour {
 				} else {
 					deltaY = 0;
 				}
+
+
+
+
 				grounded = true;
 				break;
+			}
+
+			//CHECK COLLISIONE CON ALTRI GIOCATORI PER SMASH()
+			Raggio = new Ray (new Vector2 (x, y), new Vector2 (0, dir));
+			Debug.DrawRay (ray.origin, ray.direction, Color.red);
+			if (Physics.Raycast (Raggio, out Hit, Mathf.Abs (deltaY) + skin) && Hit.transform.gameObject.tag == "Player") {
+				Debug.Log ("passato per HIT");
+				Playercol = true;
+				Enemy = Hit.transform.gameObject;
+				//SETTA LA COLLISIONE A TRUE
+			}
+				
+			//CONTROLLA LA DISTANZA TRA I DUE GIOCATORI E SE E' POSSIBILE LO SMASH
+			//float dst_enemy = transform.position.x - Hit.transform.position.x;
+			//Debug.Log (dst_enemy);
+
+			if (Playercol == true /*&& dst_enemy <= 1*/ && Input.GetMouseButtonDown (0)) {
+					//StartCoroutine (Smash());
+				Playercol = false;
+				Enemy.GetComponent<Rigidbody> ().AddForce (new Vector3 (0, -10, 0));
+				Debug.Log ("SMASHED!");
+				Enemy = null;
 			}
 		}
 			//Collision check left & right
@@ -89,6 +121,15 @@ public class PlayerPhysics : MonoBehaviour {
 		Vector2 finaltransform = new Vector2 (deltaX, deltaY);
 		transform.Translate (finaltransform);
 	}
+		
 
+	private IEnumerator Smash (){
+		
+		Debug.Log ("Passato per Ienumerator");
+		Enemy.GetComponent<Rigidbody> ().AddForce (new Vector3 (0, -10, 0));
+
+		yield return new WaitForSeconds (1);
+
+	}
 
 }
