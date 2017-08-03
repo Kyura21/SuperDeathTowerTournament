@@ -84,6 +84,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PlatformSpawner.cs" />
     <Compile Include="Assets\Resources\Script\PlayerPhysics.cs" />
     <Compile Include="Assets\Resources\Script\Player_Father.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
