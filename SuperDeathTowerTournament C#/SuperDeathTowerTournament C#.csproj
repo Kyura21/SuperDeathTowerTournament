@@ -79,14 +79,14 @@
     <Reference Include="DOTween">
       <HintPath>Assets\DOTween\DOTween.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween50">
-      <HintPath>Assets\DOTween\DOTween50.dll</HintPath>
+    <Reference Include="DOTween43">
+      <HintPath>Assets\DOTween\DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="DOTween46">
       <HintPath>Assets\DOTween\DOTween46.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween43">
-      <HintPath>Assets\DOTween\DOTween43.dll</HintPath>
+    <Reference Include="DOTween50">
+      <HintPath>Assets\DOTween\DOTween50.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +96,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MiddleGroundReplica.cs" />
     <Compile Include="Assets\PlatformSpawner.cs" />
     <Compile Include="Assets\Resources\Script\PlayerPhysics.cs" />
     <Compile Include="Assets\Resources\Script\Player_Father.cs" />

@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 421}
   m_MaxSize: {x: 12002, y: 8021}
   vertical: 0
-  controlID: 1656
+  controlID: 933
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 477
+    y: 552
     width: 962
     height: 250
   m_MaximizeOnPlay: 1
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 421}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 1503
+  controlID: 934
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -152,7 +152,7 @@ MonoBehaviour:
   - {fileID: 7}
   - {fileID: 8}
   m_Selected: 0
-  m_LastSelected: 3
+  m_LastSelected: 2
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,9 +185,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.2053214, y: 1.0893948, z: 0}
+    m_Target: {x: 4.412786, y: -4.6486707, z: 0}
     speed: 2
-    m_Value: {x: -0.2053214, y: 1.0893948, z: 0}
+    m_Value: {x: 4.412786, y: -4.6486707, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -214,9 +214,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.7309136
+    m_Target: 11.748066
     speed: 2
-    m_Value: 7.7309136
+    m_Value: 11.748066
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -277,11 +277,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
-    width: 856
-    height: 337
+    width: 962
+    height: 439
   m_ViewPositions:
-    m_KeySerializationHelper: []
-    m_ValueSerializationHelper: []
+    m_KeySerializationHelper:
+    - {fileID: 110700000, guid: 5fc43f0c4b413534ba12c51c0e5e5f6f, type: 2}
+    m_ValueSerializationHelper:
+    - {x: 1045.2001, y: 335.40002}
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 9100000, guid: 5fc43f0c4b413534ba12c51c0e5e5f6f,
     type: 2}
@@ -389,20 +391,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefab
+    - Assets/Resources/Sprite/Background
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefab
+  - Assets/Resources/Sprite/Background
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Michele Lanzo\Documents\Progetti Unity\20170914 - SDTT
     FinalExam\SuperDeathTowerTournament C#
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 3a2e0000
-    m_LastClickedID: 11834
-    m_ExpandedIDs: 00000000ce2500003228000026290000162b0000b02d0000023200002232000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 111}
+    m_SelectedIDs: 042a0000
+    m_LastClickedID: 10756
+    m_ExpandedIDs: 00000000d025000034280000282b0000c82d00001c3200003c32000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -430,7 +432,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ce2500003228000026290000162b0000b02d0000023200002232000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000d02500003428000028290000282b0000c82d00001c3200003c32000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -455,9 +457,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: fc340000
-    m_LastClickedInstanceID: 13564
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 56340000
+    m_LastClickedInstanceID: 13398
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 24270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -566,9 +568,9 @@ MonoBehaviour:
     height: 710
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fc340000
-    m_LastClickedID: 13564
-    m_ExpandedIDs: e4fbffff00000000ba330000fc340000
+    m_SelectedIDs: 56340000
+    m_LastClickedID: 13398
+    m_ExpandedIDs: 7639fffff85bffff9ac8ffff34f9ffffe4fbffff00000000b4330000d6330000dc330000163400005c340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
