@@ -12,8 +12,10 @@ namespace UnityStandardAssets._2D
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
+		private Transform m_LateralCheck;	// A osition marking where to check if the player collide with lateral band
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
         private bool m_Grounded;            // Whether or not the player is grounded.
+		private bool m_Lateral;				// Wheter or not the player collide with lateral band  
         private Transform m_CeilingCheck;   // A position marking where to check for ceilings
         const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator m_Anim;            // Reference to the player's animator component.
@@ -25,6 +27,7 @@ namespace UnityStandardAssets._2D
             // Setting up references.
             m_GroundCheck = transform.Find("GroundCheck");
             m_CeilingCheck = transform.Find("CeilingCheck");
+			m_LateralCheck = transform.Find ("LateralCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
         }
@@ -41,6 +44,10 @@ namespace UnityStandardAssets._2D
             {
                 if (colliders[i].gameObject != gameObject)
                     m_Grounded = true;
+				if (colliders [i].gameObject != gameObject)
+				{
+					m_Lateral = true;
+				}
             }
             m_Anim.SetBool("Ground", m_Grounded);
 
@@ -52,15 +59,6 @@ namespace UnityStandardAssets._2D
 
         public void Move(float move, bool jump)
         {
-            /*// If crouching, check to see if the character can stand up
-            if (!crouch && m_Anim.GetBool("Crouch"))
-            {
-                // If the character has a ceiling preventing them from standing up, keep them crouching
-                if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-                {
-                    crouch = true;
-                }
-            }*/
 
             // Set whether or not the character is crouching in the animator
            // m_Anim.SetBool("Crouch", crouch);
@@ -111,6 +109,11 @@ namespace UnityStandardAssets._2D
             theScale.x *= -1;
             transform.localScale = theScale;
         }
+
+		public void OnCollision2DEnter(BoxCollider2D coll){
+			Debug.Log ("coll disabilitato   " + coll);
+			coll.enabled = false;
+		}
 
     }
 }
